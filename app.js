@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const heading = React.createElement(
   "h1",
   { id: "heading" }, //these are attributes
@@ -11,22 +14,17 @@ console.log(heading); //this consoles an object, heading is a js object, which i
 const parent = React.createElement(
   "div",
   { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    [
-        React.createElement("h1", {}, "this is an h1 tag in child"),
-        React.createElement("h2", {}, "this is an h2 tag in child"),
-    ]
-  )
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "this is an h1 tag in child"),
+    React.createElement("h2", {}, "this is an h2 tag in child"),
+  ])
 );
 // to create multiple childs which are siblings inside a parent element,
 // we need to pass third argument of React.createElement as an array
 
 // this complex structure can be overcome by using JSX.
 
-
-console.log('parent',parent);
+console.log("parent", parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
 root.render(parent);
