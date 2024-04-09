@@ -4,7 +4,9 @@
   "description": "This is Namaste react by vinay",
 
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html"
   },
   "repository": {
     "type": "git",
